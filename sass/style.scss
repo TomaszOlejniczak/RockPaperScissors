@@ -1,0 +1,227 @@
+$black: #000;
+$white: #fff;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #2d3030;
+}
+
+header {
+	background-color: $white;
+	padding: 20px;
+}
+
+header > h1 {
+	color: #2d3030;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#trophy {
+	margin-top: 20px;
+	text-align: center;
+	font-size: 30px;
+	color: $white;
+
+	&.trophydisabled {
+		display: none;
+	}
+
+}
+
+#trophy > p {
+	color: $white;
+	font-size: 20px;
+}
+
+.roundsCounter {
+  margin-top: 20px;
+	text-align: center;
+}
+
+.roundsCounter > p {
+	color: $white;
+	font-size: 20px;
+}
+
+.score-board {
+	margin: 30px auto;
+	border: 3px solid $white;
+	border-radius: 5px;
+	width: 200px;
+	color: $white;
+	font-size: 50px;
+	text-align: center;
+	padding: 15px 20px;
+	position: relative;
+}
+
+.badge {
+	width: 100px;
+	background-color: #af0e0e;
+	color: $white;
+	font-size: 15px;
+	padding: 2px 10px;
+	text-transform: lowercase;
+}
+
+#user-label {
+	position: absolute;
+	top: 40px;
+	left: -110px;
+}
+
+#computer-label {
+	position: absolute;
+	top: 40px;
+	right: -110px;
+}
+
+.result {
+	font-size: 40px;
+	color: $white;
+}
+
+.result > p {
+	text-align: center;
+}
+
+.newGame {
+	margin: 20px auto;
+	width: 250px;
+	border: 4px solid $white;
+}
+
+.newGame > p{
+	padding: 10px;
+	color: $white;
+	text-align: center;
+	font-size: 40px;
+	text-transform: uppercase;
+}
+
+.newGame:hover p {
+	background-color: $white;
+	color: #d01115;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#message {
+	margin: 20px;
+	text-align: center;
+	color: $white;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.choices {
+	margin-top: 30px;
+	text-align: center;
+}
+
+.choices button {
+	background-color: #2d3030;
+	display: inline-block;
+	width: 115px;
+	border: 4px solid $white;
+	border-radius: 50%;
+	font-size: 50px;
+	color: $white;
+	padding: 20px;
+	margin: 10px;
+	transition: all 0.4s ease;
+}
+
+.choices button:hover {
+	cursor: pointer;
+	color: #2d3030;;
+	background-color: $white;
+}
+
+.challenge {
+	margin-top: 30px;
+	text-align: center;
+	color: $white;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.gray-glow {
+	border: 4px solid #787c77;
+	box-shadow: 0 0 15px 10px #787c77;
+}
+
+.green-glow {
+	border: 4px solid #31b43a;
+	box-shadow: 0 0 15px 10px #31b43a;
+}
+
+.red-glow {
+	border: 4px solid #d01115;
+	box-shadow: 0 0 15px 10px #d01115;
+}
+
+.choices-disabled {
+  display: none;
+}
+
+.newGame-disabled {
+  display: none;
+}
+
+.overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	
+	&.show {
+		display: block;
+	}
+}
+
+.modal {
+	display: none;
+	background: $white;
+	width: 800px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%, -50%, 0);
+	padding: 20px;
+	text-align: center;
+
+	&.show {
+		display: block;
+	}
+	
+	.close {
+		font-size: 20px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		right: 5px;
+		padding: 5px;
+		color: $black;
+		text-decoration: none;
+	}
+
+	table {
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	table th {
+		padding: 20px;
+	}
+}
